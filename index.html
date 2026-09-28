@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MaliMarket 223 - Boutique en ligne au Mali. Couveuses, matériel d'élevage et services de communication visuelle.">
+<title>MaliMarket 223 | Boutique en ligne au Mali</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="logo" href="#accueil">Mali<span>Market</span> 223</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="navlinks">
+      <a href="#accueil">Accueil</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#services">Services</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cart-link" href="#panier">🛒 <span id="cartCount">0</span></a>
+  </div>
+</header>
+
+<main>
+<section id="accueil" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">🇲🇱 ACHAT SIMPLE • LIVRAISON AU MALI</p>
+      <h1>Tout ce dont votre activité a besoin, au même endroit.</h1>
+      <p class="hero-text">Couveuses, matériel d'élevage, créations publicitaires et services pour entrepreneurs. Commandez facilement par WhatsApp.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#boutique">Voir la boutique</a>
+        <a class="btn whatsapp" href="#" onclick="openWhatsApp('Bonjour MaliMarket 223, je souhaite avoir des informations sur vos produits.')">💬 Commander sur WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="badge">OFFRE VEDETTE</div>
+      <h2>Couveuse automatique<br>176 œufs</h2>
+      <p>Une solution pratique pour démarrer ou développer votre élevage.</p>
+      <strong>100 000 F CFA</strong>
+      <button class="btn primary full" onclick="addToCart('Couveuse automatique 176 œufs',100000)">Ajouter au panier</button>
+    </div>
+  </div>
+</section>
+
+<section id="boutique" class="section">
+<div class="container">
+  <div class="section-head">
+    <div><p class="eyebrow">NOTRE BOUTIQUE</p><h2>Produits populaires</h2></div>
+    <p>Prix affichés en francs CFA.</p>
+  </div>
+  <div class="filters">
+    <button class="filter active" onclick="filterProducts('all',this)">Tous</button>
+    <button class="filter" onclick="filterProducts('elevage',this)">Élevage</button>
+    <button class="filter" onclick="filterProducts('publicite',this)">Publicité</button>
+    <button class="filter" onclick="filterProducts('services',this)">Services</button>
+  </div>
+  <div id="products" class="products"></div>
+</div>
+</section>
+
+<section id="services" class="section alt">
+<div class="container">
+  <p class="eyebrow">POUR LES ENTREPRENEURS</p>
+  <h2>Nos services</h2>
+  <div class="service-grid">
+    <article><div class="icon">🎨</div><h3>Affiches publicitaires</h3><p>Des visuels professionnels pour Facebook, WhatsApp et vos commerces.</p></article>
+    <article><div class="icon">🏪</div><h3>Design pour boutiques</h3><p>Création de visuels adaptés aux restaurants, salons de coiffure et boutiques.</p></article>
+    <article><div class="icon">📇</div><h3>Cartes de visite</h3><p>Des cartes modernes pour présenter votre activité et vos contacts.</p></article>
+    <article><div class="icon">📣</div><h3>Panneaux publicitaires</h3><p>Conception de panneaux et supports de communication pour votre entreprise.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="panier" class="section">
+<div class="container">
+  <div class="section-head"><div><p class="eyebrow">VOTRE COMMANDE</p><h2>Panier</h2></div></div>
+  <div id="cartBox" class="cart-box"><p>Votre panier est vide.</p></div>
+</div>
+</section>
+
+<section id="apropos" class="section about">
+<div class="container two-col">
+  <div><p class="eyebrow">À PROPOS</p><h2>Une boutique pensée pour le Mali.</h2></div>
+  <div><p>MaliMarket 223 facilite l'achat de produits et de services pour les particuliers, éleveurs, commerçants et entrepreneurs.</p><p>Notre objectif : présenter clairement les offres, permettre une commande rapide et faciliter l'échange avec le client sur WhatsApp.</p></div>
+</div>
+</section>
+
+<section id="contact" class="section contact">
+<div class="container contact-box">
+  <div><p class="eyebrow">CONTACT</p><h2>Besoin d'un produit ou d'un devis ?</h2><p>Écrivez-nous sur WhatsApp pour connaître la disponibilité, la livraison et les modalités de paiement.</p></div>
+  <a class="btn whatsapp big" href="#" onclick="openWhatsApp('Bonjour MaliMarket 223, je souhaite passer une commande.')">💬 Écrire sur WhatsApp</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-grid">
+  <div><div class="logo">Mali<span>Market</span> 223</div><p>Achetez simplement, recevez facilement.</p></div>
+  <div><strong>Navigation</strong><a href="#boutique">Boutique</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+  <div><strong>Commande</strong><p>WhatsApp : <span id="phoneDisplay">+223 XX XX XX XX</span></p><p>Zone : Mali</p></div>
+</div>
+<div class="copyright">© 2026 MaliMarket 223 — Tous droits réservés.</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
